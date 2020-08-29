@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.my-modal2 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.my-modal2-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+  height: 600px;
+  color: black;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+
+
+}
+
+.regtogglebtn{
+  background-color: white;
+  border: 0px;
+  font-weight: 600;
+  margin-left: 20px;
+  margin-right: 20px;
+
+}
+
+
+
+/* modal forms  */
+.cuname{
+   margin-left: 10px;
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+
+.cpassword{
+   margin-left: 10px;
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+
+.cinput{
+  width: 70%;
+  margin-left: 10px;
+  height: 40px;
+}
+
+.cregbtn{
+  margin-top: 10px;
+  background-color: #004675;
+  color: white;
+  font-weight: 600;
+  width: 250px;
+  border: 0px;
+  height: 50px;
+   margin-left: 10px;
+
+}
+
+ .caccwarn{
+    margin-left: 10px;
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 0px;
+    
+  }
+
+  .huname{
+   margin-left: 10px;
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+
+.hpassword{
+   margin-left: 10px;
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+
+.hinput{
+  width: 70%;
+  margin-left: 10px;
+  height: 40px;
+}
+
+.hregbtn{
+  margin-top: 10px;
+  background-color: #004675;
+  color: white;
+  font-weight: 600;
+  width: 250px;
+  border: 0px;
+  height: 50px;
+   margin-left: 10px;
+
+}
+
+ .haccwarn{
+    margin-left: 10px;
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 0px;
+    
+  }
+
+.activebutton{
+  border-bottom: 5px solid #004675;
+}
+  .nodisplay{
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<h2>Modal Example</h2>
+
+<!-- Trigger/Open The Modal -->
+<button id="myBtn2">Open Modal</button>
+
+<!-- The Modal -->
+<div id="myModal2" class="my-modal2">
+
+  <!-- Modal content -->
+  <div class="my-modal2-content">
+    <span class="close">&times;</span>
+    <div class="tab-toggle"><button class="regtogglebtn cregtoggle activebutton" onclick="displaycreg()"> Customer Registration</button> <button class="regtogglebtn hregtoggle"  onclick="displayhreg()"> Hotel Registration</button></div>
+  <form  class="customerreg regform" id="creg">
+    <p class="cuname">1. First Name</p>
+    <input class="cinput" type="text" name="">
+    <p class="cuname"> Last Name</p>
+    <input class="cinput" type="text" name="">
+    <p class="cuname"> Email Address</p>
+    <input class="cinput" type="text" name="">
+
+    <p class="cpassword">Password</p>
+    <input class="cinput" type="Password" name="">
+
+     <p class="cpassword">Confirm Password</p>
+    <input class="cinput" type="Password" name="">
+
+    <div style="margin-top: 5px;  margin-left: 10px;"><a href="#">Forgot Password?</a></div>
+    <button class="cregbtn">Register</button>
+    <p class="caccwarn">  Already a member ? Login Now (<a href="#">Customer</a>/ <a href="#">Hotel</a>)</p>
+</form>
+
+<form  class="hotelreg regform nodisplay" id="hreg">
+     <p class="huname">2. First Name</p>
+    <input class="cinput" type="text" name="">
+    <p class="huname"> Last Name</p>
+    <input class="hinput" type="text" name="">
+    <p class="huname"> Email Address</p>
+    <input class="hinput" type="text" name="">
+
+    <p class="hpassword">Password</p>
+    <input class="hinput" type="Password" name="">
+
+     <p class="hpassword">Confirm Password</p>
+    <input class="hinput" type="Password" name="">
+
+    <div style="margin-top: 5px;  margin-left: 10px;"><a href="#">Forgot Password?</a></div>
+    <button class="cregbtn">Register</button>
+    <p class="caccwarn">  Already a member ? Login Now (<a href="#">Customer</a>/ <a href="#">Hotel</a>)</p>
+</form>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal2");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn2");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal2.style.display = "none";
+  }
+}
+
+
+function displaycreg(){
+  x = document.getElementsByClassName('customerreg');
+  x[0].classList.remove('nodisplay');
+  y = document.getElementsByClassName('hotelreg');
+  y[0].classList.add('nodisplay');
+
+
+  a = document.getElementsByClassName('cregtoggle');
+  a[0].classList.add('activebutton');
+
+  b = document.getElementsByClassName('hregtoggle');
+  b[0].classList.remove('activebutton');
+}
+
+
+
+function displayhreg(){
+  x = document.getElementsByClassName('customerreg');
+  x[0].classList.add('nodisplay');
+  y = document.getElementsByClassName('hotelreg');
+  y[0].classList.remove('nodisplay');
+
+
+  a = document.getElementsByClassName('cregtoggle');
+  a[0].classList.remove('activebutton');
+
+  b = document.getElementsByClassName('hregtoggle');
+  b[0].classList.add('activebutton');
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+Hi ! This is Prem Banker. This is my Submission
+
+Quick Note
+
+1) Home pageis hotelhome.php
+2) The screenshots have been attached along with the files 
+
+
+FEW POINTS
+
+* Things completed
+
+1) The front end of the homepage
+2) The login/registration modals/popups
+3) Implementing AJAX to filter hotels acc. to the filters
+4) Made databases for the same
+5) Implemented new registration for customers
+
+* Things that I was not able to do in the stipulated time
+1) incomplete Login System 
+2) No password checker
+
+
+Overall, I really enjoyed working on it and I'd really like to work for you guys ahead. I was not able to complete it fully 
+but I really worked hard for it. Eagerly waiting to hear from your side.
